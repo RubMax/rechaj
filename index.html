@@ -42,10 +42,10 @@
 </head>
 <body>
   <!-- Popup d'enregistrement (doit être le premier élément) -->
-<div id="register-popup" class="register-popup-overlay" style="display: flex;">
+<div id="register-popup" class="register-popup-overlay" style="display: none;">
   <div class="register-popup-content">
     <h2>📋 Enregistrement</h2>
-    <p>Veuillez vous enregistrer pour accéder à l'application</p>
+    <p>Veuillez vous enregistrer pour accéder à nos services</p>
     
     <form id="register-form">
       <div class="form-group">
@@ -63,9 +63,8 @@
         <input type="email" id="email" name="email">
       </div>
       
-
-      
-      <button type="submit" class="register-btn">Accéder à l'application</button>
+      <button type="submit" class="register-btn">S'enregistrer</button>
+      <button type="button" class="later-btn" onclick="closeRegistrationPopup()">Plus tard</button>
     </form>
     
     <div id="register-message" style="display: none; margin-top: 10px; padding: 10px; border-radius: 5px;"></div>
@@ -169,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 🔹 Redirige automatiquement vers la page locale "erreur-mobile.html"
     const currentPath = window.location.pathname;
     const basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
-    window.location.href = basePath + "erreur-mobile.html";
+    window.location.href = basePath + "index.html";
   }
 });
 
